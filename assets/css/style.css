@@ -1,0 +1,257 @@
+/*
+  ========================================
+  HW Responsive Portfolio style.css
+  ========================================
+*/
+
+body {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #777777;
+  background: #4aaaa5;
+  background-image: url("../images/light-grey-terrazzo.png");
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 94%;
+  max-width: 960px;
+}
+.content {
+  padding-top: 20px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  max-width: 960px;
+  margin: 10% auto;
+  width: 94%;
+}
+
+/* Header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  z-index: 2;
+  line-height: 60px;
+}
+#header h1 {
+  top: 0;
+  margin: 0;
+  font-size: 1.2em;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  color: #ffffff;
+  background: #4aaaa5;
+  width: 180px;
+  text-align: center;
+}
+#topnav {
+  font-size: 11pt;
+  font-weight: 300;
+  background: #ffffff;
+  position: absolute;
+  right: 0;
+  top: -15px;
+}
+#topnav ul li {
+  list-style-type: none;
+  float: left;
+}
+#topnav ul li a {
+  float: right;
+  text-align: center;
+  color: #777777;
+  text-decoration: none;
+  padding: 0 10px;
+}
+#topnav li a {
+  color: #777777;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+#topnav a:hover {
+  color: #4aaaa5;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #666666;
+  border-top: 8px solid #4aaaa5
+}
+.cpr-footer {
+  color: white;
+  font-size: 9pt;
+  text-align: center;
+  position: relative;
+  top: 50%;
+}
+
+/* Content Custom */
+#p-title {
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  color: #4aaaa5;
+  font-size: 16pt;
+}
+hr {
+  border-color: #dddddd;
+}
+.content p {
+  margin-bottom: 50px;
+  padding: 14px 16px;
+  font-size: 12pt;
+}
+
+/* Content About */
+#smiley {
+  width: 30%;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+/* Content Contact */
+h5.input-title {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+}
+input[type="text"] {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  color: #777777;
+  width: 97%;
+  padding: 8px 10px;
+  border: 1px solid #dddddd;
+  line-height: 1.5em;
+}
+textarea {
+  text-align: left;
+  width: 99%;
+  border: 1px solid #dddddd;
+  line-height: 1.5em;
+}
+input[type="submit"] {
+  background-color: #4aaaa5;
+  color: white;
+  width: 10%;
+  padding: 10px;
+}
+.input-submit:hover {
+  color: #777777;
+}
+
+/* Content Portfolio */
+.img-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 600px;
+}
+.img-container {
+  position: relative;
+  margin: 20px;
+}
+.img-container img {
+  height: 130px;
+  width: 200px;
+}
+.img-title {
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  background: #4aaaa5;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 200px;
+}
+
+/*
+  These rules take effect when the browser's width
+  is either 980px or less.
+*/
+@media screen and (max-width: 980px) {
+  .content {
+    /* background: lightgray; */
+    max-width: 600px;
+    position: absolute;
+    left: 3%;
+  }
+  .img-flex-container {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .content {
+    margin-top: 12%;
+    }
+  #smiley {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    margin-top: 5%;
+    margin-bottom: 20%;
+    position: relative;
+    left: 0;
+    }
+  #header {
+    position: static;
+    float: none;
+    height: 120px;
+    }
+  #header .container {
+    width: 100%;
+  }
+  #header h1 {
+    width: 100%;
+  }
+  #topnav {
+    top: 60px;
+    background: #ffffff;
+    width: 50%;
+    height: 60px;
+    left: 28%;
+    z-index: 2;
+    }
+  #topnav ul {
+    float: none;
+    text-align: center;
+  }
+  #smiley {
+    width: 85%;
+    float: none;
+    margin: 5%;
+  }
+  .img-flex-container {
+    justify-content: center;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  input[type="text"] {
+    width: 94%;
+  }
+}
